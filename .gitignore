@@ -34,3 +34,8 @@
 
 # build folders
 build/
+
+# Vim
+*.swo
+*.swp
+*.swn
