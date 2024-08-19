@@ -7,5 +7,7 @@ mkdir build
 cd build
 cmake ..
 make
-make install
+
+# Make install will require sudo
+sudo make install
 
