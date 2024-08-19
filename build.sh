@@ -2,7 +2,7 @@
 
 script_dir="$(dirname "$0")"
 cd $script_dir
-rm -rf build
+# rm -rf build
 mkdir build
 cd build
 cmake ..
