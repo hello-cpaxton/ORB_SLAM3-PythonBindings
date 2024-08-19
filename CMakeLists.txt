@@ -51,8 +51,11 @@ if (Pangolin_FOUND)
   include_directories(${Pangolin_INCLUDE_DIRS})
 endif()
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/orb_slam3_python/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/orb_slam3_python/lib)
+
 
 set(TARGET_MODULE_NAME orbslam3)
 add_library(${TARGET_MODULE_NAME} SHARED
@@ -72,5 +75,4 @@ if (Pangolin_FOUND)
   target_link_libraries(${TARGET_MODULE_NAME} ${Pangolin_LIBRARIES})
 endif()
 
-install(TARGETS ${TARGET_MODULE_NAME} DESTINATION lib/python3.10/dist-packages)
-
+# install(TARGETS ${TARGET_MODULE_NAME} DESTINATION lib/python3.10/dist-packages)
